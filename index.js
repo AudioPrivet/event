@@ -21,7 +21,7 @@ class GrattisEvent {
    * @param {string} dbName - Имя базы данных к которой надо подключиться
    * @param {string} eventCollectionName - Имя коллекции в которую будет сохранять события
    */
-  constructor (mongoURL, dbName = 'grattis', eventCollectionName = 'Event') {
+  constructor (mongoURL, eventCollectionName = 'Event', dbName = 'grattis') {
     this.mongoURL = mongoURL
     this.dbName = dbName
     this.eventCollectionName = eventCollectionName
