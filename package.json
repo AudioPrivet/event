@@ -1,0 +1,11 @@
+{
+  "name": "grattis-event",
+  "version": "1.0.0",
+  "description": "Библиотека очередей на основе MongoDB",
+  "main": "index.js",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "mongodb": "^4.2.0"
+  }
+}
