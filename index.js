@@ -82,7 +82,6 @@ class GrattisEvent {
         // Получаем события
         const events = await this.collection.find(
           {
-            type,
             date: {
               $lt: Date.now()
             },
