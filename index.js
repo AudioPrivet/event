@@ -72,7 +72,7 @@ class GrattisEvent {
       await this.connect()
     }
 
-    setTimeout(async () => {
+    setInterval(async () => {
       try {
         // Если функция уже запущена пропускаем итерацию
         if (this.isRun) return null
