@@ -67,7 +67,7 @@ class GrattisEvent {
 
     console.log(value)
 
-    await this.collection.insert({
+    await this.collection.insertOne({
       value,
       date,
       // флаги отвечающие за обработку очереди
