@@ -60,9 +60,12 @@ class GrattisEvent {
         return
       }
       if (isObjectId(val)) {
+        console.log(key)
         value[key] = new ObjectId(val)
       }
     })
+
+    console.log(value)
 
     await this.collection.insert({
       value,
