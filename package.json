@@ -4,7 +4,7 @@
   "description": "Библиотека очередей на основе MongoDB",
   "main": "index.js",
   "license": "MIT",
-  "private": true,
+  "private": false,
   "dependencies": {
     "mongodb": "^4.2.0"
   }
