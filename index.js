@@ -56,7 +56,7 @@ class GrattisEvent {
 
     Object.keys(value).forEach(key => {
       const val = value[key]
-      if (typeof val === 'string') {
+      if (typeof val !== 'string') {
         return
       }
       if (isObjectId(val)) {
