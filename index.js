@@ -1,5 +1,10 @@
 const { MongoClient, ObjectId } = require('mongodb')
 
+
+function isObjectId (str) {
+  return str.match(/^[0-9a-fA-F]{24}$/)
+}
+
 /**
  * Класс очереди событий
  * Сохранение событий в источнике событий будет надежнее черем передавать события по http
@@ -48,6 +53,16 @@ class GrattisEvent {
     if (!this.collection) {
       await this.connect()
     }
+
+    Object.keys(value).forEach(key => {
+      const val = value[key]
+      if (typeof val === 'string') {
+        return
+      }
+      if (isObjectId(val)) {
+        value[key] = new ObjectId(val)
+      }
+    })
 
     await this.collection.insert({
       value,
