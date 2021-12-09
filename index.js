@@ -65,8 +65,6 @@ class GrattisEvent {
       }
     })
 
-    console.log(value)
-
     await this.collection.insertOne({
       value,
       date,
